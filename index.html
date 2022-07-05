@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR MARKET</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #navbar::before {
+            content: "";
+            position: absolute;
+            background-color: black;
+            opacity: 0.5;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            top: 0px;
+            left: 0px;
+        }
+
+        #navbar {
+            display: flex;
+            position: sticky;
+            top:0px;
+            color: white;
+        }
+
+        #logo {
+            display: inline-block;
+            margin: 3px;
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+            margin-left: 30px;
+            margin-top: 4px;
+            border-radius: 30px;
+        }
+
+        #nav {
+            display: flex;
+        }
+
+        #nav li {
+            margin: 2.5px;
+            list-style: none;
+        }
+
+        #nav li a {
+            margin: 2px;
+            padding: 2px 25px;
+            text-decoration: none;
+            color: white;
+        }
+
+        #nav li a:hover {
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+        }
+
+        .search {
+            margin-top: 10px;
+            margin-left: 120px;
+            padding: 3px;
+        }
+
+        input {
+            width: 240px;
+            padding: 6px;
+        }
+
+        .bt {
+            padding: 16px;
+            padding-left: 20px;
+        }
+
+        button {
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid white;
+            color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            text-decoration: underline;
+            color: rgb(138, 128, 128);
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            line-height: 15%;
+            text-align: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            height: 600px;
+            color: white;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            background: url('bg3.jpg') no-repeat center center/cover;
+            height: 664px;
+            width: 100%;
+            z-index: -1;
+            top: 0px;
+            left: 0px;
+            opacity: 0.88;
+        }
+
+        #services {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 8px;
+            margin: auto;
+            justify-content: center;
+            background-color: rgba(39, 53, 82, 0.927);
+        }
+
+        #service {
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        #service .box {
+            margin: 20px 40px;
+            padding: 20px;
+            border: 2px solid brown;
+            background-color: rgb(255, 216, 190);
+            border-radius: 10px;
+            box-shadow: 4px 4px 5px 2px rgb(187, 195, 255);
+        }
+
+        #service .box img {
+            display: inline-block;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+        }
+
+        #services h1 {
+            font-size: 2.5rem;
+            color: aliceblue;
+        }
+
+        #about {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            background-color: rgba(39, 53, 82, 0.927);
+        }
+
+        #about h1 {
+            font-size: 2.5rem;
+            color: azure;
+            margin-bottom: 30px;
+        }
+
+        #ab {
+            display: flex;
+        }
+
+        #ab .box .content p {
+            color: rgb(18, 9, 85);
+        }
+
+        #about .box {
+            margin: 30px 50px;
+            padding: 20px;
+            border: 2px solid brown;
+            background-color: rgb(255, 216, 190);
+            border-radius: 20px;
+            box-shadow: 4px 4px 5px 2px rgb(187, 195, 255);
+        }
+
+        #clients {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            height: 450px;
+        }
+
+        #clients h1 {
+            font-size: 3rem;
+        }
+
+        .client {
+            margin: 20px;
+            margin: auto;
+        }
+
+        .client img {
+            margin: auto;
+            height: 100px;
+            width: 100px;
+        }
+
+        #cbox {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        #clients::before {
+            content: "";
+            background: url('bg1.jpg') no-repeat center center/cover;
+            position: absolute;
+            z-index: -1;
+            left: 0px;
+            height: 451px;
+            width: 100%;
+            opacity: 0.7;
+        }
+
+        .footer h2 {
+            text-align: center;
+        }
+
+        .footer .ctr {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .footer .ct {
+            font-size: 20px;
+            padding: 2px 220px;
+        }
+
+        .cpy {
+            background-color: black;
+            color: azure;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        @media (max-width:1240px) {
+            #navbar {
+                flex-direction: column;
+            }
+
+            #logo {
+                text-align: center;
+            }
+
+            img {
+                height: 50px;
+                width: 50px;
+                margin-top: 5px;
+                margin-left: 0px;
+            }
+
+            ul {
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 0px;
+            }
+
+            .search {
+                display: none;
+            }
+
+            .bt {
+                display: none;
+            }
+
+            #home {
+                height: 600px;
+                font-size: 1rem;
+                line-height: normal;
+            }
+
+            #home::before {
+                height: 745px;
+            }
+
+            #service {
+                flex-direction: column;
+            }
+
+            #service .box img {
+                height: 50px;
+                width: 50px;
+            }
+
+            #services h1 {
+                font-size: 1.5rem;
+                color: aliceblue;
+            }
+
+            #clients h1 {
+                font-size: 1.5rem;
+            }
+
+            #cbox {
+                flex-wrap: wrap;
+            }
+
+            .client img {
+                height: 75px;
+                width: 75px;
+            }
+
+            #about h2 {
+                font-size: 1.5rem;
+            }
+
+            #ab {
+                flex-direction: column;
+            }
+
+            .footer .ct {
+                padding: 2px 50px;
+            }
+
+            .footer .ctr {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.jpg" alt="CAR MARKET">
+        </div>
+        <ul id="nav">
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services">Services</a></li>
+            <li class="item"><a href="#clients">Clients</a></li>
+            <li class="item"><a href="#about">About Us</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="search the showrooms & cars">
+        </div>
+        <div class="bt">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+    <section id="home">
+        <h1>Welcome! To The Souvik's Car world</h1>
+        <p>welcome to the CAR MARKET,your own personalized maodern car showroom</p>
+        <p>Here you can find your dream car at a nominal cost.</p>
+    </section>
+    <section id="services">
+        <h1>Our services</h1>
+        <div id="service">
+            <div class="box">
+                <img src="delivery.png" alt="" srcset="">
+                <h3>Home Delivery</h3>
+                <div class="content">
+                    <p>We can deliver your car at your home,where ever your home is in india.you have to just buy from
+                        our any neraest showroom and to pay a very nominal fees for that services.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="repair.png" alt="" srcset="">
+                <h3>Car servicing</h3>
+                <div class="content">
+                    <p>You can service your car at our nearest center or you can book your slot from our nearest
+                        center's call no and we will service your car with a very nominal cost.you shall also have a
+                        free car servicing within 1 year of buying from us.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="drive.png" alt="" srcset="">
+                <h3>Certified drivers</h3>
+                <div class="content">
+                    <p>We are having some awesome certified well trained drivers for you.You can hier drivers for your
+                        car and you can pay and book yours in advance from your nearest car center.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="clients">
+        <h1>Our Clients</h1>
+        <div id="cbox">
+            <div class="client">
+                <img src="facebook.png" alt="facebook">
+            </div>
+            <div class="client">
+                <img src="google.png" alt="google">
+            </div>
+            <div class="client">
+                <img src="twitter.png" alt="twitter">
+            </div>
+            <div class="client">
+                <img src="apple.png" alt="apple">
+            </div>
+            <div class="client">
+                <img src="telegram.png" alt="telegram">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h1>About Us</h1>
+        <div id="ab">
+            <div class="box">
+                <h2>Our Vision</h2>
+                <div class="content">
+                    <p>We are providing the best ever services through out India to you.We are spreading our showrooms
+                        and
+                        we will reach you to all locations and hopefully you will also meet us in our centers as well.We
+                        are
+                        waiting for you.Have a nice day!</p>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Our Misson</h2>
+                <div class="content">
+                    <p>We have our showrooms in New
+                        Delhi, Mumbai, Kolkata, Chennai, Hyderabad, Guwahati, Jaipur, Raipur, Chandigar, Gandhinagar,
+                        Patna, Bhopal, Srinagar, Gangtok, Amarabati etc.We wiil soon reach the suburban areas with our
+                        awesome services.please suppor us and make
+                        our dreams a succes as well as yours.Thank you!</p>
+                </div>
+            </div>
+    </section>
+    <section id="contact">
+        <div class="footer">
+            <h2>Contact Us</h2>
+            <hr>
+            <div class="ctr">
+                <div class="ct">E-Mail id: souvikbh12@gmail.com</div>
+                <div class="ct">Call us on:+919433591372</div>
+            </div>
+        </div>
+        <div class="cpy">copyrights &copy; | All rights reserved</div>
+    </section>
+</body>
+
+</html>
